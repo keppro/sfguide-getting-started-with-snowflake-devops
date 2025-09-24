@@ -257,7 +257,8 @@ pipeline = [
 root = Root(Session.builder.getOrCreate())
 
 # create views in Snowflake
-silver_schema = root.databases["quickstart_prod"].schemas["silver"]
+environment = os.environ.get('environment', 'prod')
+silver_schema = root.databases[f"quickstart_{environment}"].schemas["silver"]
 silver_schema.user_defined_functions.create(
     map_city_to_airport, mode=CreateMode.or_replace
 )
