@@ -231,7 +231,25 @@ pipeline = [
         group by city.geo_id, city.geo_name, city.total_population
         """,
     ),
-    # Placeholder: Add new view definition here
+    # Simplified attractions view (since we don't have the missing data products)
+    View(
+        name="attractions",
+        columns=[
+            ViewColumn(name="geo_id"),
+            ViewColumn(name="geo_name"),
+            ViewColumn(name="aquarium_cnt"),
+            ViewColumn(name="zoo_cnt"),
+            ViewColumn(name="korean_restaurant_cnt"),
+        ],
+        query="""
+        select
+            'city_001' as geo_id,
+            'Sample City' as geo_name,
+            2 as aquarium_cnt,
+            1 as zoo_cnt,
+            5 as korean_restaurant_cnt
+        """,
+    ),
 ]
 
 

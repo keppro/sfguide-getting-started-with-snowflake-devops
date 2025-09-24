@@ -1,8 +1,8 @@
 [connections.default]
+account = "https://zffdage-ecb47142.snowflakecomputing.com"
+user = "keppro"
+password = "tbhwGDqc@2y*YfyoQa5qH"
 warehouse = "QUICKSTART_WH"
-role = "ACCOUNTADMIN"
 database = "QUICKSTART_COMMON"
 schema = "PUBLIC"
-account = "<INSERT YOUR ACCOUNT IDENTIFIER>"
-user = "<INSERT YOUR USERNAME>"
-password = "<INSERT YOUR PASSWORD>"
+role = "ACCOUNTADMIN"
